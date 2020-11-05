@@ -1,0 +1,38 @@
+﻿<Window x:Class="Project_GrandWaze.Select_store"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_GrandWaze"
+        mc:Ignorable="d"
+        Title="Select_store" Height="450" Width="800">
+    <Grid>
+
+
+        <ComboBox x:Name="stors" HorizontalAlignment="Left" Margin="132,288,0,0" VerticalAlignment="Top" Width="247" Height="34" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Label Content="באיזה קומה אתה נמצא" HorizontalAlignment="Left" Margin="551,24,0,0" VerticalAlignment="Top" Width="136" Height="28"/>
+        <GroupBox x:Name="group" Header="רשימת החנויות שלי" HorizontalAlignment="Right" Height="347" Margin="0,24,373.6,0" VerticalAlignment="Top" Width="391" FlowDirection="RightToLeft"/>
+
+        <StackPanel>
+            <ListView x:Name="list_of_store" HorizontalAlignment="Right" Height="150" Margin="0,65,411.6,0" VerticalAlignment="Top" Width="298" SelectionChanged="list_of_store_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Content="בחר חנות" HorizontalAlignment="Left" Margin="279,20,0,0" VerticalAlignment="Top" Width="103" Height="45" FontSize="19"/>
+        </StackPanel>
+        <GroupBox x:Name="choose_floor" Header="בחר קומה" Margin="466,52,0,222" HorizontalAlignment="Left" Width="277" RenderTransformOrigin="0.5,0.5" FlowDirection="RightToLeft">
+
+        </GroupBox>
+        <StackPanel>
+            <RadioButton x:Name="map_1" Content="קומה 1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,80,154.6,260" Height="29" Width="146" Checked="map_1_Checked"/>
+            <RadioButton x:Name="map_2" Content="קומה 2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,-250,220.6,260" Height="27" Width="80" Checked="map_2_Checked"/>
+            <RadioButton  x:Name="map_3" Content="קומה 3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,-250,199.6,260" Height="21" Width="101" RenderTransformOrigin="0.509,-1.103" Checked="map_3_Checked" />
+            <Button x:Name="found" Content="הצג מסלול" Margin="30,-100,620.6,0" Height="28" RenderTransformOrigin="0.5,0.5" Click="found_Click"/>
+
+
+        </StackPanel>
+    </Grid>
+</Window>
